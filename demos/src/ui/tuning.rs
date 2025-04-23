@@ -1,5 +1,5 @@
 #[cfg(feature = "egui")]
-use std::ops::RangeInclusive;
+use core::ops::RangeInclusive;
 
 use bevy_tnua::builtins::{
     TnuaBuiltinClimb, TnuaBuiltinCrouch, TnuaBuiltinDash, TnuaBuiltinKnockback,

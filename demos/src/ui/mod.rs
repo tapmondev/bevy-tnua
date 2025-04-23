@@ -7,7 +7,7 @@ mod level_selection;
 pub mod plotting;
 pub mod tuning;
 
-use std::marker::PhantomData;
+use core::marker::PhantomData;
 
 use bevy::prelude::*;
 #[cfg(feature = "egui")]
@@ -143,7 +143,7 @@ fn ui_system<C: Component + UiTunable>(
         crate::app_setup_options::AppSetupConfiguration,
     >,
 ) {
-    use std::any::TypeId;
+    use core::any::TypeId;
 
     let Ok(mut primary_window) = primary_window_query.get_single_mut() else {
         return;

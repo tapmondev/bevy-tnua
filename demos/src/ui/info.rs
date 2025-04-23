@@ -1,4 +1,5 @@
-use std::collections::BTreeMap;
+extern crate alloc;
+use alloc::collections::BTreeMap;
 
 use bevy::prelude::*;
 #[cfg(feature = "egui")]

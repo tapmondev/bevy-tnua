@@ -30,7 +30,7 @@ use tnua_demos_crate::character_control_systems::platformer_control_systems::{
 use tnua_demos_crate::character_control_systems::Dimensionality;
 use tnua_demos_crate::character_control_systems::{
     info_dumpeing_systems::{
-        character_control_info_dumping_system, character_control_radar_visualization_system,
+        character_control_info_dumping_system, // character_control_radar_visualization_system,
     },
     platformer_control_systems::JustPressedCachePlugin,
 };
@@ -106,7 +106,7 @@ fn main() {
         Update,
         character_control_info_dumping_system.in_set(DemoInfoUpdateSystemSet),
     );
-    app.add_systems(Update, character_control_radar_visualization_system);
+    //app.add_systems(Update, character_control_radar_visualization_system);
     app.add_plugins(tnua_demos_crate::ui::DemoUi::<
         CharacterMotionConfigForPlatformerDemo,
     >::default());

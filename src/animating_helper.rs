@@ -1,4 +1,4 @@
-use std::mem::discriminant;
+use core::mem::discriminant;
 
 use bevy::prelude::*;
 

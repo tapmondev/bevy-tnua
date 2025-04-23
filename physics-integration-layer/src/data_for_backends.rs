@@ -1,4 +1,4 @@
-use std::ops::{Add, AddAssign};
+use core::ops::{Add, AddAssign};
 
 use crate::math::{AdjustPrecision, Float, Quaternion, Vector3};
 use bevy::prelude::*;

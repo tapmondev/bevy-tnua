@@ -1,4 +1,5 @@
-use std::collections::VecDeque;
+extern crate alloc;
+use alloc::collections::VecDeque;
 
 use bevy::prelude::*;
 use bevy_egui::egui;

@@ -54,7 +54,7 @@ impl DemoFramerateParam<'_> {
         }
         #[cfg(feature = "framepace")]
         {
-            use std::time::Duration;
+            use core::time::Duration;
 
             let limiter = &mut self.framepace_settings.limiter;
             egui::ComboBox::from_label("Framepace Limiter")
