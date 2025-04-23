@@ -20,7 +20,7 @@ use bevy_tnua_rapier2d::*;
 
 use tnua_demos_crate::app_setup_options::{AppSetupConfiguration, ScheduleToUse};
 use tnua_demos_crate::character_control_systems::info_dumpeing_systems::{
-    character_control_info_dumping_system, character_control_radar_visualization_system,
+    character_control_info_dumping_system, // character_control_radar_visualization_system,
 };
 use tnua_demos_crate::character_control_systems::platformer_control_systems::{
     apply_platformer_controls, CharacterMotionConfigForPlatformerDemo, FallingThroughControlScheme,
@@ -102,7 +102,7 @@ fn main() {
         Update,
         character_control_info_dumping_system.in_set(DemoInfoUpdateSystemSet),
     );
-    app.add_systems(Update, character_control_radar_visualization_system);
+    //app.add_systems(Update, character_control_radar_visualization_system);
     app.add_plugins(tnua_demos_crate::ui::DemoUi::<
         CharacterMotionConfigForPlatformerDemo,
     >::default());

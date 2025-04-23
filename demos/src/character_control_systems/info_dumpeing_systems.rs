@@ -63,24 +63,27 @@ pub fn character_control_info_dumping_system(
     }
 }
 
-pub fn character_control_radar_visualization_system(
-    query: Query<&TnuaObstacleRadar>,
-    spatial_ext: SpatialExtFacade,
-    mut gizmos: Gizmos,
-) {
-    if true {
-        // Don't show the gizmos
-        return;
-    }
-    for obstacle_radar in query.iter() {
-        let radar_lens = TnuaRadarLens::new(obstacle_radar, &spatial_ext);
-        for blip in radar_lens.iter_blips() {
-            let closest_point = blip.closest_point().get();
-            gizmos.arrow(
-                obstacle_radar.tracked_position().f32(),
-                closest_point.f32(),
-                css::PALE_VIOLETRED,
-            );
-        }
-    }
-}
+// Somehow the gizmos thing is not compilling.
+//
+//
+// pub fn character_control_radar_visualization_system(
+//     query: Query<&TnuaObstacleRadar>,
+//     spatial_ext: SpatialExtFacade,
+//     mut gizmos: Gizmos,
+// ) {
+//     if true {
+//         // Don't show the gizmos
+//         return;
+//     }
+//     for obstacle_radar in query.iter() {
+//         let radar_lens = TnuaRadarLens::new(obstacle_radar, &spatial_ext);
+//         for blip in radar_lens.iter_blips() {
+//             let closest_point = blip.closest_point().get();
+//             gizmos.arrow(
+//                 obstacle_radar.tracked_position().f32(),
+//                 closest_point.f32(),
+//                 css::PALE_VIOLETRED,
+//             );
+//         }
+//     }
+// }

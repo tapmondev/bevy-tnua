@@ -1,4 +1,4 @@
-use std::time::Duration;
+use core::time::Duration;
 
 use crate::math::{AdjustPrecision, AsF32, Float, Vector3};
 use bevy::prelude::*;

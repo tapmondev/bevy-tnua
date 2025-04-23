@@ -2,7 +2,7 @@ use bevy::prelude::*;
 use bevy::time::Stopwatch;
 use bevy_tnua_physics_integration_layer::math::{Float, Vector3};
 
-use std::{any::Any, time::Duration};
+use core::{any::Any, time::Duration};
 
 use crate::{TnuaMotor, TnuaProximitySensor, TnuaRigidBodyTracker};
 

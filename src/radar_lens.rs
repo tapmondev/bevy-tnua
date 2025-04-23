@@ -1,4 +1,4 @@
-use std::cell::OnceCell;
+use core::cell::OnceCell;
 
 use crate::math::{AdjustPrecision, AsF32, Float, Vector3};
 use bevy::{math::InvalidDirectionError, prelude::*};

@@ -66,6 +66,28 @@ jobs:
        with:
          command: fmt
          args: --all -- --check
+  check-compiles-no-std:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        target:
+          - "x86_64-unknown-none"
+          - "wasm32v1-none"
+          - "thumbv6m-none-eabi"
+        dimensions:
+          - "avian2d"
+          - "avian3d"
+          - "rapier2d"
+          - "rapier3d"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+      - uses: Swatinem/rust-cache@v2
+      - name: Run cargo check
+        run: cargo check -p ${{ matrix.dimensions }} --target ${{ matrix.target }}
 
   clippy:
     name: Clippy

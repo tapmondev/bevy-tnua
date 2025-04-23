@@ -1,4 +1,4 @@
-use std::any::Any;
+use core::any::Any;
 
 use bevy::ecs::schedule::{InternedScheduleLabel, ScheduleLabel};
 use bevy::ecs::system::EntityCommands;
